@@ -47,9 +47,9 @@ class _PostScreenState extends State<PostScreen> {
                     title: Text(
                         "${postProviderTrue!.postList[index]['userId']}"),
                     subtitle: Text(
-                        "${postProviderTrue!.postList[index]['id']}"),
-                    trailing: Text(
-                        "${postProviderTrue!.postList[index]['body']}"),
+                        "${postProviderTrue!.postList[index]['title']}"),
+                    // trailing: Text(
+                    //     "${postProviderTrue!.postList[index]['body']}"),
 
 
                   );
