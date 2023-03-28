@@ -15,10 +15,11 @@ class PostScreen extends StatefulWidget {
 class _PostScreenState extends State<PostScreen> {
   PostProvider? postProviderTrue;
   PostProvider? postProviderFalse;
+
   @override
   void initState() {
     super.initState();
-    Provider.of<PostProvider>(context,listen: false).jsonParsing();
+    Provider.of<PostProvider>(context, listen: false).jsonParsing();
   }
 
   @override
@@ -44,14 +45,10 @@ class _PostScreenState extends State<PostScreen> {
                 itemBuilder: (context, index) {
                   return ListTile(
                     leading: Text("${index}"),
-                    title: Text(
-                        "${postProviderTrue!.postList[index]['userId']}"),
-                    subtitle: Text(
-                        "${postProviderTrue!.postList[index]['title']}"),
-                    // trailing: Text(
-                    //     "${postProviderTrue!.postList[index]['body']}"),
-
-
+                    title:
+                        Text("${postProviderTrue!.postList[index]['userId']}"),
+                    subtitle:
+                        Text("${postProviderTrue!.postList[index]['title']}"),
                   );
                 },
                 itemCount: postProviderTrue!.postList.length,
